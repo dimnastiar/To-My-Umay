@@ -1,114 +1,124 @@
-// PASSWORD
-
-function checkName(){
-
-let name = document
-.getElementById("nameInput")
-.value.toUpperCase();
-
-if(name == "UMAY"){
-
-alert("WELCOME MY LOVE ❤️");
-
-window.scrollTo({
-
-top:window.innerHeight*2,
-behavior:"smooth"
-
-});
-
-}else{
-
-document.getElementById("error").innerHTML =
-"EHHH INI KHUSUS UMAY YA!!!";
-
-}
-
-}
-
 
 
 // MUSIC
 
-function playMusic(){
+function startWebsite(){
 
-let music = document
-.getElementById("music");
+let music = document.getElementById("music");
 
 music.play();
 
+window.scrollTo({
+
+top:window.innerHeight,
+behavior:"smooth"
+
+});
+
+}
+
+
+
+// LOVE RAIN
+
+
+setInterval(createLove,400);
+
+
+function createLove(){
+
+
+const love = document.createElement("div");
+
+love.classList.add("love");
+
+love.innerHTML="❤️";
+
+
+love.style.left=Math.random()*100+"vw";
+
+love.style.animationDuration=Math.random()*3+3+"s";
+
+
+document.body.appendChild(love);
+
+
+setTimeout(()=>{
+
+love.remove();
+
+},6000);
+
+
 }
 
 
-
-// LETTER
-
-function openLetter(){
-
-document
-.getElementById("letter")
-.style.display="block";
-
-}
 
 
 
 // LOVE REASONS
 
+
 const reasons = [
 
 "Your smile.",
-"Your laugh.",
 "Your eyes.",
+"Your laugh.",
 "Your kindness.",
 "Your voice.",
-"Your existence.",
-"Your support.",
-"Your patience.",
 "Your hugs.",
-"Your jokes.",
-"Your love.",
-"Your honesty.",
 "Your personality.",
-"Your beauty.",
-"Your dreams.",
-"Your heart.",
 "Your effort.",
+"Your patience.",
+"Your honesty.",
+"Your existence.",
+"Your dreams.",
+"Your support.",
 "Your happiness.",
+"Your jokes.",
 "Your soul.",
+"Your beauty.",
+"Everything about you.",
+"You're my safe place.",
 "Because you're UMAY."
 
 ];
 
-let i=0;
+
+
+let i = 0;
+
 
 function nextReason(){
 
+
 i++;
 
-if(i>=reasons.length){
+if(i >= reasons.length){
 
-i=0;
+i = 0;
+
+}
+
+
+document.getElementById("reason").innerHTML = reasons[i];
+
 
 }
 
-document
-.getElementById("reason")
-.innerHTML = reasons[i];
 
-}
 
 
 
 // VIRTUAL HUG
 
+
 function virtualHug(){
 
-document
-.getElementById("hugText")
-.innerHTML =
 
-"🫂 +999 LOVE POINTS<br><br>I LOVE YOU UMAY";
+document.getElementById("hugText").innerHTML =
+
+"🫂<br><br>Sending 999999 LOVE POINTS...<br><br>I LOVE YOU UMAY ❤️";
 
 
 if(navigator.vibrate){
@@ -117,42 +127,64 @@ navigator.vibrate(500);
 
 }
 
+
+}
+
+
+
+
+
+// TOGETHER COUNTER
+
+
+function updateCounter(){
+
+
+const startDate = new Date("2025-01-01");
+
+
+const now = new Date();
+
+
+const diff = now - startDate;
+
+
+
+const seconds = Math.floor(diff / 1000);
+
+const minutes = Math.floor(seconds / 60);
+
+const hours = Math.floor(minutes / 60);
+
+const days = Math.floor(hours / 24);
+
+
+
+document.getElementById("days").innerHTML =
+
+days + " Days";
+
+
+document.getElementById("hours").innerHTML =
+
+hours + " Hours";
+
+
+document.getElementById("minutes").innerHTML =
+
+minutes + " Minutes";
+
+
+document.getElementById("seconds").innerHTML =
+
+seconds + " Seconds";
+
+
 }
 
 
 
-
-// LOVE RAIN
-
-setInterval(()=>{
-
-let heart=document.createElement("div");
-
-heart.innerHTML="❤️";
-
-heart.style.position="fixed";
-heart.style.left=Math.random()*100+"vw";
-heart.style.top="-20px";
-heart.style.fontSize="20px";
-
-document.body.appendChild(heart);
-
-let topPos=0;
-
-let timer=setInterval(()=>{
-
-topPos+=3;
-
-heart.style.top=topPos+"px";
-
-if(topPos>window.innerHeight){
-
-heart.remove();
-clearInterval(timer);
-
-}
-
-},20);
+setInterval(updateCounter,1000);
 
 
-},400);
+updateCounter();
