@@ -61,26 +61,26 @@ love.remove();
 
 const reasons = [
 
-"Your smile.",
-"Your eyes.",
-"Your laugh.",
-"Your kindness.",
-"Your voice.",
-"Your hugs.",
-"Your personality.",
-"Your effort.",
-"Your patience.",
-"Your honesty.",
-"Your existence.",
-"Your dreams.",
-"Your support.",
-"Your happiness.",
-"Your jokes.",
-"Your soul.",
-"Your beauty.",
-"Everything about you.",
-"You're my safe place.",
-"Because you're UMAY."
+"20. Your smile.",
+"1. Your eyes.",
+"2. Your laugh.",
+"3. Your kindness.",
+"4. Your voice.",
+"5. Your hugs.",
+"6. Your personality.",
+"7. Your effort.",
+"8. Your patience.",
+"9. Your honesty.",
+"10. Your existence.",
+"11. Your dreams.",
+"12. Your support.",
+"13. Your happiness.",
+"14. Your jokes.",
+"15. Your soul.",
+"16. Your beauty.",
+"17. Everything about you.",
+"18. You're my safe place.",
+"19. Because you're UMAY."
 
 ];
 
