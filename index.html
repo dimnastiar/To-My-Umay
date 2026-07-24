@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,72 +10,40 @@
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
+
 <body>
 
+
 <audio id="music" loop>
-    <source src="lagu-umay.mp3" type="audio/mpeg">
+<source src="lagu-umay.mp3" type="audio/mpeg">
 </audio>
-
-
-<!-- LOVE EFFECT -->
-<div id="love-rain"></div>
-
-
-
-<!-- LOADING -->
-
-<section class="page loading">
-
-<h1>❤️</h1>
-
-<h2>Preparing Something Special...</h2>
-
-<p>For UMAY</p>
-
-</section>
-
-
-
-<!-- PASSWORD -->
-
-<section class="page">
-
-<h1>Hi Cutie!</h1>
-
-<p>Masukkan nama panggilanmu.</p>
-
-<input type="text" id="nameInput">
-
-<button onclick="checkName()">
-
-Open My Heart
-
-</button>
-
-<p id="error"></p>
-
-</section>
 
 
 
 <!-- OPENING -->
 
-<section class="page">
+<section class="page hero">
 
-<h1>ALOOWWWW CAYANGGG!!!</h1>
+<h1>For UMAY ❤️</h1>
 
 <p>
 
-Aku punya sesuatu untukmu.
-
-Website ini aku buat dengan penuh cinta.
-
-hehehehe~
+Website ini dibuat khusus untuk orang yang paling aku sayangi.
 
 </p>
 
-<button onclick="playMusic()">
+<p>
+Pakai headset ya cayanggg~
+</p>
+
+<button onclick="startWebsite()">
 
 Open Your Gift
 
@@ -84,18 +53,19 @@ Open Your Gift
 
 
 
-
 <!-- SONG -->
 
 <section class="page">
 
-<h1>Our Song ❤️</h1>
+<div class="card">
 
-<div class="music-card">
+<h2>Now Playing 🎵</h2>
 
-<h2>Now Playing</h2>
+<h3>Lagu Favorit UMAY</h3>
 
-<p>Lagu Favorit UMAY</p>
+<p>
+This song reminds me of you.
+</p>
 
 </div>
 
@@ -104,20 +74,21 @@ Open Your Gift
 
 
 
-<!-- GALLERY -->
+<!-- PHOTO STORY -->
 
 <section class="page">
 
-<h1>My Favorite Girl</h1>
+<h2>My Favorite Smile</h2>
 
-<div class="gallery">
+<div class="photo-card">
 
 <img src="foto1.jpg">
-<img src="foto2.jpg">
-<img src="foto3.jpg">
-<img src="foto4.jpg">
-<img src="foto5.jpg">
-<img src="foto6.jpg">
+
+<p>
+
+You make my day better.
+
+</p>
 
 </div>
 
@@ -125,17 +96,73 @@ Open Your Gift
 
 
 
-<!-- COUNTER -->
+<section class="page">
+
+<h2>The Prettiest Girl</h2>
+
+<div class="photo-card">
+
+<img src="foto2.jpg">
+
+<p>
+
+I'm so lucky to have you.
+
+</p>
+
+</div>
+
+</section>
+
+
 
 <section class="page">
 
-<h1>6 Months Together</h1>
+<h2>My Safe Place</h2>
 
-<div class="counter">
+<div class="photo-card">
 
-<p>183 Days</p>
-<p>4380 Hours</p>
-<p>262800 Minutes</p>
+<img src="foto3.jpg">
+
+<p>
+
+Home is wherever you are.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<!-- 6 MONTHS -->
+
+<section class="page">
+
+<div class="card">
+
+<h2>6 Months Together</h2>
+
+<p>
+
+I'm still falling in love with you every single day.
+
+</p>
+
+<br>
+
+<h3 id="days">0 Days</h3>
+<h3 id="hours">0 Hours</h3>
+<h3 id="minutes">0 Minutes</h3>
+<h3 id="seconds">0 Seconds</h3>
+
+<p>
+
+And still counting...
+
+</p>
 
 </div>
 
@@ -148,9 +175,9 @@ Open Your Gift
 
 <section class="page">
 
-<h1>20 Reasons Why I Love You</h1>
+<div class="card">
 
-<div class="love-box">
+<h2>20 Reasons Why I Love You</h2>
 
 <p id="reason">
 
@@ -158,9 +185,10 @@ Because you're UMAY.
 
 </p>
 
+
 <button onclick="nextReason()">
 
-Next Reason
+Next Reason ❤️
 
 </button>
 
@@ -175,30 +203,51 @@ Next Reason
 
 <section class="page">
 
-<h1>Secret Letter</h1>
 
-<button onclick="openLetter()">
-
-OPEN LETTER
-
-</button>
+<h2>Secret Letter ✉️</h2>
 
 
-<div id="letter">
+<div class="message">
 
-Aku mungkin tidak sempurna.
+Hey UMAY...
 
-Tapi aku akan selalu berusaha menjadi orang yang selalu ada untukmu.
+</div>
 
-Saat kamu sedih.
 
-Saat kamu bahagia.
+<div class="message">
 
-Saat kamu lelah.
+Thank you for staying.
 
-Aku akan selalu memilih kamu.
+</div>
 
-Aku sayang kamu.
+
+<div class="message">
+
+Thank you for loving me.
+
+</div>
+
+
+
+<div class="message">
+
+Thank you for existing.
+
+</div>
+
+
+
+<div class="message">
+
+Aku akan selalu berusaha menjadi rumah ternyaman untukmu.
+
+</div>
+
+
+
+<div class="message">
+
+I LOVE YOU SO MUCH ❤️
 
 </div>
 
@@ -208,36 +257,46 @@ Aku sayang kamu.
 
 
 
+
 <!-- PROMISE -->
+
 
 <section class="page">
 
-<h1>My Promise</h1>
+<div class="card">
+
+<h2>My Promise</h2>
+
 
 <ul>
 
 <li>Aku akan selalu mendukungmu.</li>
 <li>Aku akan selalu mendengarkanmu.</li>
 <li>Aku akan selalu mendoakanmu.</li>
-<li>Aku akan selalu memilihmu.</li>
 <li>Aku akan selalu ada untukmu.</li>
+<li>Aku akan selalu memilihmu.</li>
 
 </ul>
+
+
+</div>
 
 </section>
 
 
 
 
-<!-- VIRTUAL HUG -->
+<!-- HUG -->
 
 <section class="page">
 
-<h1>Need A Hug?</h1>
+<div class="card">
+
+<h2>Bad Day?</h2>
 
 <p>
 
-Kalau capek...
+Kalau capek dan sedih...
 
 peluk aku dulu ya.
 
@@ -251,7 +310,10 @@ PELUK AKU
 </button>
 
 
-<h2 id="hugText"></h2>
+<h3 id="hugText"></h3>
+
+
+</div>
 
 </section>
 
@@ -262,27 +324,72 @@ PELUK AKU
 
 <section class="page final">
 
-<h1>I LOVE YOU</h1>
 
-<h1>UMAY</h1>
+<h1>
 
-<h2>FOREVER ❤️</h2>
+MY FAVORITE HUMAN
+
+</h1>
+
+
+<img src="foto4.jpg" class="final-photo">
+
 
 
 <p>
 
-6 Months.
+If someday you're sad.
 
-∞ More To Go.
+Please come back here.
+
 
 </p>
 
 
 <p>
 
-Made With Love.
+Because no matter what happens...
+
+You will always have me.
+
 
 </p>
+
+
+
+<h2>
+
+I CHOOSE YOU.
+
+YESTERDAY.
+
+TODAY.
+
+TOMORROW.
+
+FOREVER.
+
+
+</h2>
+
+
+
+<p>
+
+∞
+
+
+</p>
+
+
+<p>
+
+LOVE YOU UMAY ❤️
+
+
+</p>
+
+
 
 </section>
 
